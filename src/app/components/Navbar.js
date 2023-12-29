@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import logo from "../../../public/images/logo.png";
+import logo from "../../../public/images/logo8.png";
 import Image from "next/image";
+
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -16,19 +17,21 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+    <nav className="bg-white border-gray-200 dark:bg-[#000000] dark:border-gray-700">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 md:p-4">
+        {" "}
+        <a href="/" className="flex items-center space-x-4 rtl:space-x-reverse">
+          {" "}
           <Image
             src={logo}
-            className="h-8"
+            className="h-8 md:h-10"
             alt="Flowbite Logo"
-            width={50}
-            height={50}
+            width={100} 
+            height={150} 
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            Che Vino
-          </span>
+          {/* <span className="self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-white">
+          Che Vino
+        </span> */}
         </a>
         <button
           data-collapse-toggle="navbar-dropdown"
@@ -65,7 +68,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/"
-                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                className="block py-2 px-3 text-white bg-[#CD0617] rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-[#CD0617] dark:bg-[#CD0617] md:dark:bg-transparent"
                 aria-current="page"
               >
                 Home
@@ -75,7 +78,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/search"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-[#CD0617] md:hover:bg-transparent md:border-0 md:text-[#CD0617] md:p-0 dark:text-white md:dark:hover:text-[#CD0617] dark:hover:bg-[#CD0617] dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Search
               </a>
@@ -83,7 +86,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/contact"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-[#CD0617] md:hover:bg-transparent md:border-0 md:text-[#CD0617] md:p-0 dark:text-white md:dark:hover:text-[#CD0617] dark:hover:bg-[#CD0617] dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Contact
               </a>
@@ -91,7 +94,7 @@ const Navbar = () => {
             <li>
               <a
                 href="/reviews"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-[#CD0617] md:hover:bg-transparent md:border-0 md:text-[#CD0617] md:p-0 dark:text-white md:dark:hover:text-[#CD0617] dark:hover:bg-[#CD0617] dark:hover:text-white md:dark:hover:bg-transparent"
               >
                 Reviews
               </a>
@@ -100,7 +103,7 @@ const Navbar = () => {
               <button
                 id="dropdownNavbarLink"
                 type="button"
-                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-[#CD0617] md:hover:bg-transparent md:border-0 md:dark:hover:text-[#CD0617] md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-[#CD0617] md:dark:hover:bg-transparent"
                 onClick={toggleWineDropdown}
               >
                 Wine Generator{" "}
@@ -125,7 +128,7 @@ const Navbar = () => {
                 id="wineDropdownNavbar"
                 className={`${
                   isWineDropdownOpen ? "block" : "hidden"
-                } z-10 absolute w-40 bg-gray-900 divide-y divide-gray-100 rounded-md `}
+                } z-10 absolute w-40 divide-y divide-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-white dark:text-white dark:hover:bg-[#1A1A1A] dark:focus:ring-gray-600 `}
               >
                 <ul
                   className="py-2 text-sm text-gray-700 dark:text-gray-400"
@@ -134,7 +137,7 @@ const Navbar = () => {
                   <li>
                     <a
                       href="/wines/red"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-white hover:text-black"
+                      className="block px-4 py-2 text-white hover:text-[#CD0617]"
                     >
                       Red Wine
                     </a>
@@ -142,7 +145,7 @@ const Navbar = () => {
                   <li>
                     <a
                       href="/wines/white"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-white hover:text-black"
+                      className="block px-4 py-2 text-white hover:text-[#CD0617]"
                     >
                       White Wine
                     </a>
@@ -150,7 +153,7 @@ const Navbar = () => {
                   <li>
                     <a
                       href="/wines/sparking"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-white hover:text-black"
+                      className="block px-4 py-2 text-white hover:text-[#CD0617]"
                     >
                       Sparkling Wine
                     </a>
@@ -158,7 +161,7 @@ const Navbar = () => {
                   <li>
                     <a
                       href="/wines/rose"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-white hover:text-black"
+                      className="block px-4 py-2 text-white hover:text-[#CD0617]"
                     >
                       Rose Wine
                     </a>
@@ -166,7 +169,7 @@ const Navbar = () => {
                   <li>
                     <a
                       href="/wines/port"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-white hover:text-black"
+                      className="block px-4 py-2 text-white hover:text-[#CD0617]"
                     >
                       Port Wine
                     </a>
@@ -174,7 +177,7 @@ const Navbar = () => {
                   <li>
                     <a
                       href="/wines/dessert"
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 text-white hover:text-black"
+                      className="block px-4 py-2 text-white hover:text-[#CD0617]"
                     >
                       Dessert Wine
                     </a>
