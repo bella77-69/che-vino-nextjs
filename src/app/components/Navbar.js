@@ -22,16 +22,16 @@ const Navbar = () => {
         {" "}
         <a href="/" className="flex items-center space-x-4 rtl:space-x-reverse">
           {" "}
-          <Image
+          {/* <Image
             src={logo}
             className="h-8 md:h-10"
             alt="Flowbite Logo"
             width={100} 
             height={150} 
-          />
-          {/* <span className="self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-white">
+          /> */}
+          <span className="self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-white">
           Che Vino
-        </span> */}
+        </span>
         </a>
         <button
           data-collapse-toggle="navbar-dropdown"
@@ -152,7 +152,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <a
-                      href="/wines/sparking"
+                      href="/wines/sparkling"
                       className="block px-4 py-2 text-white hover:text-[#CD0617]"
                     >
                       Sparkling Wine
